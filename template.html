@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+ <head>
+  <style>
+    body {
+      background-color: rgb(38, 16, 59);
+         }
+   </style>   
+   <meta charset="utf-8">
+   <title>Template</title>
+ </head>
+ <body>
+    <header>
+      <div class="container">
+        <h1 style="color: rgb(255, 255, 255); font-size: 100px; background-color: rgb(83, 22, 140); text-align: center;" class="movie recommender">Error 404</h1>
+        <strong><nav>
+         <ul style="color: rgb(212, 224, 41);" class ="menu">
+            <li><a style="color: rgb(224, 41, 148); font-size: 40px;" href="{{ url_for('home') }}">Home</a></li>
+            <li><a style="color: rgb(224, 41, 148); font-size: 40px;"  href="{{ url_for('questions') }}">Find movies for me</a></li>
+          </ul>
+        </nav></strong>
+      </div>
+    </header>
+    
+    {% block content %}
+    {% endblock %}
+    
+ </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+          background-color: rgb(38, 16, 59);
+             }
+             *{
+                color: rgb(96, 180, 232);
+                font-size: 30px;
+             }
+       </style>   
+    <meta charset="UTF-8">
+    <title>Questions</title>
+</head>
+<body>
+    <h1 style="color: rgb(237, 201, 156); font-size: 60px;">What are your preferences ??</h1>
+<form action="/responses" method='POST'>
+    <ol>
+        {% for i in q %}
+            <li style="color: aquamarine;">{{i}}</li>
+            {% for j in o[i] %}
+                <input type='radio' value='{{j}}' name='{{i}}' />{{j}}
+            {% endfor %}
+        {% endfor %}
+    </ol>
+    <input type="submit" value="submit" />
+</form>
+</body>
+</html>
